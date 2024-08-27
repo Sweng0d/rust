@@ -18,3 +18,7 @@ First, notice that all the tuple code in the variable declaration and the functi
 
 The &s1 syntax lets us create a reference that refers to the value of s1 but does not own it. Because it does not own it, the value it points to will not be dropped when the reference stops being used.
 
+
+
+Read more here:
+https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
