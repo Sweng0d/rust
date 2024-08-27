@@ -22,3 +22,8 @@ The &s1 syntax lets us create a reference that refers to the value of s1 but doe
 
 Read more here:
 https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
+
+
+The Rules of References:
+1- At any given time, you can have either one mutable reference or any number of immutable references. 
+2- References must always be valid.
