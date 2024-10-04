@@ -53,4 +53,70 @@ x + y
 
 panic!() → macro que para estudo e retorna um erro
 
-add more
+Stack 
+
+-Fast memory creation and retrieval… Speed, Speed, Speed
+
+-Memory is automatically recaptured by the program after variables go out of scope
+
+-Stack é o default em Rust
+
+-Fixed size variables
+
+let stack_i8: i8 = 10;
+
+let stack_f32: f32 = 20;
+
+let stack_bool: bool = true;
+
+let stack_char: chart = ‘a’;
+
+Rust sabe exatamente o tamanho que deixar para cada variável
+
+Heap
+
+-Flexibility
+
+-Memory that can grow in size (Vector, Hashmap, String, etc)
+
+-Runtime performance cost (speed)
+
+-Memory that can live beyond the scope that created it
+
+-Memory is automatically recaptured when the last OWNER goes out of scope
+
+let heap_vector: Vec<i8> = Vec::new(); //vec![5,2];
+
+let heap_string: String = String::from(”Howdy”);
+
+let heap_i8: Box<i8> = Box::new(30);
+
+Now, the difference in practice:
+
+let stack_i8_2 = stack_i8;
+
+println!(”{}”, stack_i8);
+
+println!(”{}”, stack_i8_2);
+
+//no erros
+
+let heap_i8_2= heap_i8;
+
+println!(”{}”, heap_i8);
+
+println!(”{}”, heap_i8_2);
+
+//error!!
+
+We can fix it:
+
+let heap_i8_2 = &heap_i8; 
+
+or
+
+let heap_i8_2 = heap_i8.clone();
+
+Isso é literalmente fazer uma cópia, em outras linguagens 2 variáveis podem apontar para a mesma memória, em Rust não.
+
+
