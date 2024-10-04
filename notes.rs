@@ -119,4 +119,15 @@ let heap_i8_2 = heap_i8.clone();
 
 Isso é literalmente fazer uma cópia, em outras linguagens 2 variáveis podem apontar para a mesma memória, em Rust não.
 
+This works:
+fn main() {
+    let stack = 10;
+    let stack2 = stack;
+
+    println!("stack is {}", stack);
+    println!("stack2 is {}", stack2);
+}
+
+
+
 
