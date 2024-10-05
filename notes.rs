@@ -128,6 +128,34 @@ fn main() {
     println!("stack2 is {}", stack2);
 }
 
+- `&str` é uma **referência imutável** para uma sequência de caracteres. Quando você usa uma string literal, como `"hello"`, você está criando uma `&str` que é alocada em uma região estática da memória.
+- **Copiar uma `&str`** significa apenas copiar a referência, e não o conteúdo da string. Em Rust, tipos como referências (`&str`), inteiros (`i32`), e outros tipos primitivos implementam o trait `Copy`, o que permite que sejam copiados sem mover a propriedade.
+- Como resultado, você pode ter múltiplas referências imutáveis (`&str`) para o mesmo valor, e isso não entra em conflito com as regras de ownership ou borrowing.
 
+let s1 = "hello"; // `s1` é uma `&str` estática
+let s2 = s1;      // `s2` é uma cópia da referência imutável de `s1`
+
+println!("{}", s1); // Funciona, pois `&str` é `Copy`
+println!("{}", s2); // Funciona também
+
+### **`String` – Tipo de Dados para Strings Alocadas Dinamicamente**
+
+- `String` é um tipo de dados proprietário que possui a sequência de caracteres. Quando você cria um `String`, ele aloca memória no heap para armazenar seu conteúdo e mantém controle sobre essa memória.
+- Diferente de `&str`, o tipo `String` não implementa o trait `Copy`. Em vez disso, ele implementa o trait `Drop` porque precisa liberar a memória quando sai do escopo.
+- Quando você faz uma atribuição como `let s2 = s1;`, você está **movendo** a propriedade do `String` de `s1` para `s2`. Isso significa que `s1` se torna inválido e não pode mais ser usado.
+
+let s1 = String::from("hello");
+let s2 = s1; // `s1` é movido para `s2`
+
+println!("{}", s1); // Erro! `s1` não é mais válido
+println!("{}", s2); // Funciona
+
+Three Rules of Ownership
+
+1-Each value in Rust has an owner
+
+2- There can only be one owner at a time
+
+3- When the owner goes out of scope, the value will be dropped
 
 
