@@ -158,4 +158,8 @@ Three Rules of Ownership
 
 3- When the owner goes out of scope, the value will be dropped
 
+STACK → COPY
+
+HEAP → MOVE
+
 
