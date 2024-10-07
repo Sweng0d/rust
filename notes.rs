@@ -177,4 +177,17 @@ fn print_str(s: &String)  {
     println!("{}",s)
 }
 
+Sobre o * -> Operador de desreferência. Ele permite acessar diretamente o valor na heap para qual o Box(y) aponta
 
+
+fn main() {
+    let x = Box::new(5);
+    
+    let mut y = Box::new(1);      // update this line, don't change other lines!
+    
+    *y = 4;
+    
+    assert_eq!(*x, 5);
+
+    println!("Success!");
+}
