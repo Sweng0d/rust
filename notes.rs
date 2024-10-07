@@ -162,4 +162,19 @@ STACK → COPY
 
 HEAP → MOVE
 
+Se você vai colocar uma referencia como input de uma função isso deve ser notificado
+
+// Fix the error without removing any code
+fn main() {
+    let s = String::from("Hello World");
+
+    print_str(&s);
+
+    println!("{}", s);
+}
+
+fn print_str(s: &String)  {
+    println!("{}",s)
+}
+
 
