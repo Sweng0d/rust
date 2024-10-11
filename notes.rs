@@ -191,3 +191,5 @@ fn main() {
 
     println!("Success!");
 }
+
+Seguir todo ritmo depois adaptar
