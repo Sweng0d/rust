@@ -195,3 +195,5 @@ fn main() {
 Seguir todo ritmo depois adaptar
 
 allback
+
+estudar option i32
