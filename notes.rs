@@ -197,3 +197,6 @@ Seguir todo ritmo depois adaptar
 allback
 
 estudar option i32
+
+voltar depois pro ultimo exercicio daqui
+https://practice.course.rs/compound-types/enum.html
