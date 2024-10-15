@@ -1,14 +1,21 @@
 //generics
 
-struct Point<T> {
+//nem tudo precisa ser genérico
+//da para ter váriso tipos de genéricos diferentes na mesma struct
+struct Point<T, U> {
     x: T,
-    y: T,
+    y: U,
 }
 
+struct DougsData<T> {
+    x: i32,
+    y: T,
+    z: T
+}
 fn main() {
     let a = Point {
         x: 100,
-        y: -1,
+        y: -1_f32,
     };
     println!("x = {}, y = {}", a.x, a.y);
 
