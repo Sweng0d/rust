@@ -200,3 +200,5 @@ estudar option i32
 
 voltar depois pro ultimo exercicio daqui
 https://practice.course.rs/compound-types/enum.html
+
+continuar rust structs
