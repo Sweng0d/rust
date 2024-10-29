@@ -204,3 +204,5 @@ https://practice.course.rs/compound-types/enum.html
 watch videos and edit solana
 
 continuar rust structs
+
+edit and concepts integratin in sol ecosystem
